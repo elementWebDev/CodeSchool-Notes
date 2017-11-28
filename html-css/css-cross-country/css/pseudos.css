@@ -1,0 +1,20 @@
+.pseudo-list {
+
+}
+.pseudo-list li {
+  color: #aaa;
+  border-bottom: 1px solid #aaa;
+  text-transform: uppercase;
+  padding-top: .8em;
+}
+.pseudo-list .last {
+  border-bottom: 0;
+}
+.pseudo-list li:last-child {
+  border-bottom: 0;
+}
+/* wow... what frustration.. may need to fix for mobile */
+.warn {
+  margin-top: -60px;
+  margin-left: 100px;
+}

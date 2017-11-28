@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object Oriented Javascript</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var customer = {
+      name: "Tom Smith",
+      speak: function(){
+        return "My name is " + this.name;
+      },
+
+      address: {
+        street: "123 Main St",
+        city: "Pittsburg",
+        state: "PA"
+      }
+    };
+
+    document.write(customer.speak() + "<br />");
+
+    document.write(customer.name + " lives at " + customer.address.street + "<br />");
+
+    // adding info
+    customer.address.country = "US";
+
+    document.write(customer.address.country + "<br />");
+
+    function Person(name, street){
+      this.name = name;
+      this.street = street;
+      this.info = function(){
+        return "My name is " + this.name + " and I live on " + this.street;
+      }
+    }
+
+    var bobSmith = new Person("Bob Smith", "234 Main St");
+
+    document.write(bobSmith.info() + "<br />");
+
+    document.write("Bob is a Person " + (bobSmith instanceof Person) + "<br />")
+
+    function changeName(person){
+      person.name = "Sue Smith";
+    }
+
+
+  </script>
+</body>
+</html>
